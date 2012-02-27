@@ -12,6 +12,7 @@ html { font-family:monospace; font-size:12px }
 </style>
 </head>
 <body>
+<!-- Lol -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
