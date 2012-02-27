@@ -1,0 +1,19 @@
+<style type='text/css'>
+img { max-height:50px; max-width:50px; border:1px solid black }
+html { font-family:monospace; font-size:10px }
+</style>
+<?py import re ?>
+<table>
+<?py for line in log: ?>
+<?py dl = log.index(line) ?>
+<?py if re.search('\[[0-9]{2}\:[0-9]{2}\:[0-9]{2}\] \<frussif\>', line): ?>
+<tr><td><img src='/s/frussif.jpg'/></td><td>${line}</td><td><a href='/dl/${dl}'>link</a></td></tr>
+<?py elif re.search('\[[0-9]{2}\:[0-9]{2}\:[0-9]{2}\] \<maws\>', line): ?>
+<tr><td><img src='/s/anon.jpg'/></td><td>Line Expunged</td><td>Link Expunged</td></tr>
+<?py elif re.search('http://green-oval.net/', line) or re.search('http://dicksindustrial.com/', line): ?>
+<tr><td><img src='/s/anon.jpg'/></td><td>Line Expunged</td><td>Link Expunged</td></tr>
+<?py else: ?>
+<tr><td><img src='/s/anon.jpg'/></td><td>${line}</td><td><a href='/dl/${dl}'>link</a></td></tr>
+<?py #endif ?>
+<?py #endfor ?>
+</table>
