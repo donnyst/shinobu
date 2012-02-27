@@ -1,7 +1,10 @@
+<!DOCTYPE html>
 <style type='text/css'>
 img { max-height:50px; max-width:50px; border:1px solid black }
 html { font-family:monospace; font-size:10px }
 </style>
+</head>
+<body>
 <?py import re ?>
 <table>
 <?py for line in log: ?>
@@ -17,3 +20,5 @@ html { font-family:monospace; font-size:10px }
 <?py #endif ?>
 <?py #endfor ?>
 </table>
+</body>
+</html>
